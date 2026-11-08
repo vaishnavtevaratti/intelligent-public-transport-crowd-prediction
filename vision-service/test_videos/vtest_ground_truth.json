@@ -1,0 +1,10 @@
+{
+  "video": "vtest.avi (OpenCV sample data, Apache-2.0, https://github.com/opencv/opencv/blob/4.x/samples/data/vtest.avi)",
+  "method": "People counted by eye on each sampled frame; a person is counted when most of the body is visible. Counted once by one annotator (no second annotator), so small disagreements are possible.",
+  "notes": {
+    "520": "two people overlap at the bottom centre (one partly hidden behind the other)",
+    "680": "a tiny, mostly hidden figure near the van at the top right was NOT counted",
+    "760": "the figure near the van at the top right is clearly visible and WAS counted"
+  },
+  "counts": {"40": 6, "120": 8, "200": 7, "280": 7, "360": 6, "440": 3, "520": 7, "600": 6, "680": 7, "760": 8}
+}

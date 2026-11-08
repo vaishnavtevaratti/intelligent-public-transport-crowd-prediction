@@ -1,0 +1,65 @@
+{
+  "video": "vtest.avi (OpenCV sample data, Apache-2.0)",
+  "line": "vertical line at x = 0.5 of the frame (pixel 384); L->R = entry, R->L = exit",
+  "method": "Each counted event was checked on before/after crops of the tracked person (output/crossings/panels_*.jpg). Missed crossings were searched with a slit-scan of the line column (slitscan_*.jpg) and every unexplained figure was checked on frame strips (check_*.jpg). One annotator.",
+  "event_verdicts": {
+    "1": "correct",
+    "2": "correct",
+    "3": "correct",
+    "4": "correct",
+    "5": "correct",
+    "6": "correct",
+    "7": "correct",
+    "8": "correct",
+    "9": "correct",
+    "10": "correct",
+    "11": "correct",
+    "12": "correct",
+    "13": "correct",
+    "14": "correct",
+    "15": "correct",
+    "16": "correct",
+    "17": "correct",
+    "18": "correct",
+    "19": "correct",
+    "20": "correct",
+    "21": "correct",
+    "22": "correct",
+    "23": "correct",
+    "24": "correct"
+  },
+  "missed": [
+    {
+      "frames": "158-166",
+      "direction": "R->L",
+      "certainty": "definite",
+      "note": "person in white hood crosses next to the signpost; no event"
+    },
+    {
+      "frames": "361-368",
+      "direction": "R->L",
+      "certainty": "probable",
+      "note": "man reaches just beyond the dead band while others cross L->R at the same time"
+    }
+  ],
+  "excluded": [
+    {
+      "frames": "610-660",
+      "note": "woman walks up to the line and turns back: not a crossing (correctly not counted)"
+    },
+    {
+      "frames": "20-140",
+      "note": "group standing on the line: no crossing until one leaves (event 2)"
+    },
+    {
+      "frames": "790-795",
+      "note": "person reaches the line in the last frames; crossing not completed before the video ends"
+    }
+  ],
+  "actual_crossings": {
+    "total": 26,
+    "L->R": 11,
+    "R->L": 15,
+    "total_if_probable_excluded": 25
+  }
+}

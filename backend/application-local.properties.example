@@ -1,0 +1,8 @@
+# Copy to application-local.properties (git-ignored) and fill in real values,
+# or set the same names as environment variables.
+DB_PASSWORD=your-mysql-root-password
+JWT_SECRET=replace-with-a-random-string-of-at-least-32-characters
+# Optional: Google Routes API (server-side key restricted to the Routes API) for road distance / ride time
+# GOOGLE_ROUTES_API_KEY=your-server-routes-key
+# Optional: allow "Register as Administrator" with this code
+# ADMIN_REGISTRATION_CODE=choose-a-secret-code

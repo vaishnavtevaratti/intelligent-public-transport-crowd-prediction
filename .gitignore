@@ -1,0 +1,94 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Secrets and local configuration (never commit)
+.env
+.env.*
+!.env.example
+backend/application-local.properties
+db-backups/
+
+# Build output and tooling
+backend/target/
+ml-service/.venv/
+ml-service/**/__pycache__/
+ml-service/.pytest_cache/
+e2e/screenshots/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Large synthetic training series (regenerate: python ml-service/generate_occupancy_series.py)
+ml-service/data/occupancy_series.csv
+# Vision service
+vision-service/.venv/
+vision-service/install.log
+vision-service/output/
+vision-service/sensor_keys.json
+
+vision-service/agent_token.txt
+.demo-pids/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Node
+node_modules/
+dist/
+coverage/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Java
+target/
+*.class
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+
+# Database backups and dumps
+db-backups/
+*.sql
+*.sql.gz
+*.dump
+
+# Temporary files
+tmp/
+temp/
+.DS_Store
+Thumbs.db
