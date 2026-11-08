@@ -84,6 +84,12 @@ public class DataInitializer implements CommandLineRunner {
     private final boolean seedDemoData;
     private final boolean resetDemoNetwork;
 
+    // Production sets these via environment variables; the defaults are the public local demo passwords.
+    @Value("${app.seed.admin-password:admin123}")
+    private String seedAdminPassword;
+    @Value("${app.seed.user-password:user123}")
+    private String seedUserPassword;
+
     @Autowired
     public DataInitializer(UserRepository userRepository,
                            RouteRepository routeRepository,
@@ -190,11 +196,11 @@ public class DataInitializer implements CommandLineRunner {
     }
 
     private void seedUsers() {
-        // LOCAL DEVELOPMENT ONLY demo accounts - change these passwords before any real deployment.
+        // Demo accounts. Passwords come from SEED_ADMIN_PASSWORD / SEED_USER_PASSWORD (local defaults: admin123 / user123).
         User admin = User.builder()
                 .name("System Admin")
                 .email("admin@transport.com")
-                .password(passwordEncoder.encode("admin123"))
+                .password(passwordEncoder.encode(seedAdminPassword))
                 .phone("+910000000001")
                 .role(Role.ADMIN)
                 .build();
@@ -202,7 +208,7 @@ public class DataInitializer implements CommandLineRunner {
         User user = User.builder()
                 .name("Demo Passenger")
                 .email("user@transport.com")
-                .password(passwordEncoder.encode("user123"))
+                .password(passwordEncoder.encode(seedUserPassword))
                 .phone("+910000000002")
                 .role(Role.USER)
                 .build();
